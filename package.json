@@ -1,0 +1,20 @@
+{
+  "name": "backendcoder",
+  "version": "1.0.0",
+  "description": "node app",
+  "main": "desafio2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatoBertini/backendCoder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatoBertini/backendCoder/issues"
+  },
+  "homepage": "https://github.com/PatoBertini/backendCoder#readme"
+}

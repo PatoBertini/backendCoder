@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/PatoBertini/backendCoder/issues"
   },
-  "homepage": "https://github.com/PatoBertini/backendCoder#readme"
+  "homepage": "https://github.com/PatoBertini/backendCoder#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }

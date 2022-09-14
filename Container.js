@@ -56,9 +56,7 @@ class Container {
     }
   }
 
-  getRandom() {
-    return this.getById(Math.floor(Math.random() * this.products.length) + 1);
-  }
+
 
   async save(title, price) {
     try {

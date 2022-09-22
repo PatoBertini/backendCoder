@@ -1,26 +1,12 @@
 [
-    {
-        "name": "Pizza Napolitana",
-        "price": "2.50",
-        "thumbnail": "https://www.example.com/images/pizza-napolitana.jpg",
-        "id": 1
-    },
-    {
-        "name": "Burger",
-        "price": "2.50",
-        "thumbnail": "https://www.example.com/images/Burger.jpg",
-        "id": 3
-    },
-    {
-        "name": "Black Tea",
-        "price": "2.50",
-        "thumbnail": "https://www.example.com/images/black-tea.jpg",
-        "id": 2
-    },
-    {
-        "name": "Medialunas",
-        "price": "2.50",
-        "thumbnail": "https://www.example.com/images/Medialunas.jpg",
-        "id": 4
-    }
+	{
+		"title": "lapton",
+		"price": 123144,
+		"id": 1
+	},
+	{
+		"title": "lapton",
+		"price": 123144,
+		"id": 2
+	}
 ]

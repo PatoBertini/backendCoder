@@ -95,39 +95,21 @@ class Container {
   }
 }
 
-const productList = [
-  {
-    title: "Escuadra",
-    price: 123.45,
-    thumbnail:
-      "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
-  },
-  {
-    title: "Calculadora",
-    price: 234.56,
-    thumbnail:
-      "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-  },
-  {
-    title: "Globo Terráqueo",
-    price: 345.67,
-    thumbnail:
-      "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
-  },
-];
 
-// try {
-//   let fileContent = await this.#readDocument(); // leemos nuestro archivo con array de objetos
-//   obj.id = (await this.getLastId()) + 1; // declaramos el id del obj a cargar
-//   await fileContent.push(obj);
-//   await fs.promises.writeFile(
-//     this.fileName,
-//     JSON.stringify(fileContent, null, "\t")
-//   );
-//   return `your new element is saved under the id : ${obj.id}`;
-// } catch (error) {
-//   console.log(error);
-// }
+// Metodos clases anteriores
+
+// app.get("/productos", async (req, res) => {
+//   const result = await getProductsFromDB;
+//   res.send(result);
+// });
+
+// app.get("/productoRandom", async (req, res) => {
+//   const result = await getProductsFromDB;
+//   let randomNumber = Math.ceil(Math.random() * result.length);
+//   let newProduct = myFile.getById(randomNumber);
+//   res.send(newProduct);
+// });
+
 
 
 module.exports = {

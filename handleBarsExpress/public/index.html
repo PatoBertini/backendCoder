@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ingreso de Productos</title>
+  
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    
+        <div class="divConteiner">
+            <h1>LocalHost PORT 8080</h1>
+            <h2>Nuevo Producto</h2>
+            <br>
+
+            <form class="formProduct" action="/productos" method="POST">
+         
+                <div >
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" class="form-control" type="text" name="title" required>
+                </div>
+
+                
+                <div >
+                    <label for="precio">Precio</label>
+                    <input id="precio" class="form-control" type="number" step="0.01" name="price" required>
+                </div>
+
+                
+                <div >
+                    <label for="foto">Foto URL</label>
+                    <input id="foto" class="form-control" type="url" name="thumbnail">
+                </div>
+
+              
+                    <button class="uploadButton">Cargar Producto</button>
+
+                    
+                </form>
+                <button class="seeButton"><a href="/productos" type="button" class="btn btn-primary">Ver productos</button>
+            <br>
+        </div>
+   
+
+</body>
+
+</html>

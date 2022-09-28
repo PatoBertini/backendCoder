@@ -1,0 +1,60 @@
+extends layouts/index.pug
+
+block vista
+    style.
+        .table td,
+        .table th {
+        vertical-align: middle;
+        color: black;
+        font-size: 2rem;
+        }
+        h1 {
+            color: blueviolet;
+        }
+        hr {
+            background-color: #ddd;
+        }
+        .productos {
+            min-height: 100vh;
+        }
+        .button {
+        background: #FBCA1F;
+        font-family: inherit;
+        padding: 0.6em 1.3em;
+        font-weight: 900;
+        font-size: 18px;
+        border: 3px solid black;
+        border-radius: 0.4em;
+        box-shadow: 0.1em 0.1em;
+        color: black;
+        }
+        .button:hover {
+        transform: translate(-0.05em, -0.05em);
+        box-shadow: 0.15em 0.15em;
+        }
+
+        .button:active {
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
+        }
+
+    div(class="productos")
+        h1='Vista de Productos'
+        br
+        if hayProductos
+            div(class="table-responsive")
+                table(class="table table-light")
+                    tr
+                        th='Nombre'
+                        th='Precio'
+                        th='Foto'
+                        each producto in productos
+                            tr
+                                td=producto.title
+                                td=producto.price
+                                td
+                                    img(width="50" src=producto.thumbnail alt="not found")
+        else
+            h3(class="alert alert-warning")='No se encontraron productos'
+        br
+        a(href="/" type="button" class="button")='Cargar un nuevo producto'

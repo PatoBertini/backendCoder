@@ -115,3 +115,27 @@ class Container {
 module.exports = {
   Container
 };
+
+
+
+app.post("/api/productos", async (req, res) => {
+  const { title, price, thumbnail } = req.body;
+  const newProduct = { title, price, thumbnail } 
+  await productos.push(newProduct)
+  res.redirect('/productos')
+});
+
+app.get("/productos/:id", (req, res) => {
+  const producto = productos.find(
+    (prod) => prod.id === parseInt(req.params.id)
+  );
+  if (!producto) {
+    return res.status(404).send({ error: "Producto no encontrado" });
+  } else {
+    res.status(201).send(producto);
+  }
+});
+
+app.get("/api/productos", (req, res) => {
+  res.render("index.hbs");
+});

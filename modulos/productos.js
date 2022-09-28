@@ -91,7 +91,7 @@ router.delete("/:id", (req, res) => {
 
 router.put("/:id", (req, res) => {
   // res.send('PROBANDO PUT')
-  let id = req.params.id
+  let id = req.params.id;
   const producto = productos.find(
     (prod) => prod.id === parseInt(req.params.id)
   );

@@ -1,6 +1,7 @@
 const express = require("express");
 const productos = require("./modulos/productos");
 const ProductosApi = require("./api/constructor");
+// const hbs = require("express-handlebars");
 console.clear();
 
 const app = express();
@@ -11,6 +12,8 @@ app.use(express.urlencoded({ extended: true })); // Data que viene del lado del 
 
 // Declarando/api/productos
 app.use("/api/productos", productos);
+
+
 
 //========================================================= Server_Listen
 const PORT = process.env.PORT || 8080;

@@ -38,6 +38,9 @@ class ProductosApi {
       return { error: "producto no encontrado" };
     }
   }
+  borrarAll() {
+    this.elementos = []
+}
 }
 
 module.exports = ProductosApi;

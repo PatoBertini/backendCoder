@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
+    
   </head>
   <body>
     <h1>LocalHost PORT 8080</h1>
-    <h2>Nuevo Producto</h2>
-    <form class="formProduct" action="/api/productos" method="post">
+    <h2>APP CHAT</h2>
+    <form onsubmit="return addMessage(this)" >
+
+      <input type="text" name="autor" placeholder="Ingresa tu nombre"  id="autor">
+      <input type="text" name="text"  placeholder="Ingrese tu mensaje" id="mensaje">
+
+      <button id="enviar">Enviar</button>
+    </form>
+    
+    <div id="layoutMensaje"></div>
+    <!-- <form class="formProduct" action="/api/productos" method="post">
       <label for="title">Producto</label>
       <input type="text" name="title" id="title" /> <br />
 
@@ -21,6 +31,8 @@
       <input type="text" name="thumbnail" id="thumbnail" /> <br />
 
       <button type="submit">Cargar Producto</button>
-    </form>
+    </form> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

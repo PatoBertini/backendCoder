@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "socket.io": "^4.5.2"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "06-desafio",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

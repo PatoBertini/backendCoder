@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+.formContenedor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+}
+.formProductos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.formProductos h2{
+    color: blue;
+    font-size: 2.4rem;
+}
+.labelContenedor {
+  padding: 10px;
+  margin: 10px;
+}
+
+.labelContenedor label,
+input {
+  font-size: 1.5rem;
+}
+
+#layout {
+  border: 1px solid black;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.mail, .id {
+  color: blue;
+  font-size: 2rem;
+}
+.date {
+  color: green;
+  font-size: 2rem;
+}
+.msj {
+  color: red;
+  font-size: 2rem;
+  font-style: italic;
+}

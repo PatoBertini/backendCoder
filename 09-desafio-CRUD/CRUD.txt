@@ -1,0 +1,65 @@
+Inicializamos la base de datos 
+
+=>  use ecommerce
+
+=>  db.createCollection('productos')
+=>  db.createCollection('mensajes')
+
+Consigna 1 y 2
+
+Datos
+
+=>  db.products.insertMany([
+	{ "title": "Maletero Guitarra", "price": 4500, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236113/Ecommerce-guitarras/accesories/0996102306_fen_acc_frt_1_nr_xz0vkq.jpg" },
+	{ "title": "Cable 0.5mm", "price": 1200, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236113/Ecommerce-guitarras/accesories/0990810211_fen_acc_frt_2_nr_c16z1d.jpg" },
+	{ "title": "Set Puas", "price": 230, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236113/Ecommerce-guitarras/accesories/1980351050_fen_acc_dtl_1_nr_osg6dk.jpg" },
+	{ "title": "Sostenedor Guitarra", "price": 1452, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236113/Ecommerce-guitarras/accesories/0990623001_fen_acc_frt_1_nr_w40qng.jpg" },
+	{ "title": "Guitarra Acustica 12-V", "price": 4699, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236133/Ecommerce-guitarras/acoustic/0970155021_gtr_frt_001_rl_l7za1o.jpg" },
+	{ "title": "Guitarra Acustica Thunder", "price": 4899, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236133/Ecommerce-guitarras/acoustic/0970110206_gtr_frt_001_rr_yvhmyo.jpg" },
+	{ "title": "Bajo Electrico Mykons", "price": 2800, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236124/Ecommerce-guitarras/basses/0199010732_gtr_frt_001_rr_koge7a.jpg" },
+	{ "title": "Bajo Electrico Quyst", "price": 2300, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236123/Ecommerce-guitarras/basses/0144060390_gtr_frt_001_rr_tplxob.jpg" },
+	{ "title": "Electro Virtuo", "price": 4999, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663235958/Ecommerce-guitarras/Electrics/01-electrica-marron_if2wsn.webp" },
+	{ "title": "Electro Carbon Green", "price": 4879, "thumbnail": "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663235958/Ecommerce-guitarras/Electrics/X10-carbon-green._jpg_exxogh.webp" }
+])
+
+=>  db.messages.insertMany([
+	{ "author": "pato21", date: new Date().toLocaleString(), "message": "Sale cs?" },
+	{ "author": "rayo43", date: new Date().toLocaleString(), "message": "y dale" },
+	{ "author": "lagarto91", date: new Date().toLocaleString(), "message": "Messii" },
+	{ "author": "pato21", date: new Date().toLocaleString(), "message": "Vayan prendiendo" },
+	{ "author": "rayo43", date: new Date().toLocaleString(), "message": "carreas Lagarto?" },
+	{ "author": "lagarto91", date: new Date().toLocaleString(), "message": "Cuando no" },
+	{ "author": "pato21", date: new Date().toLocaleString(), "message": "Dale, hago unos mates y estoy" },
+	{ "author": "rayo43", date: new Date().toLocaleString(), "message": "Ya toy yo" },
+	{ "author": "lagarto91", date: new Date().toLocaleString(), "message": "Voy creando" },
+	{ "author": "pato21", date: new Date().toLocaleString(), "message": "Entrandooo" }
+])
+
+Consigna 3
+=>  db.products.find()
+=> db.messages.find()
+
+Consigna 4
+=>  db.products.estimatedDocumentCount()
+=> db.messages.estimatedDocumentCount()
+
+Consigna 5
+=> db.products.insertOne({ title: "Pedal de guitarra", price: 2250, thumbnail: "https://res.cloudinary.com/dd4ko3egd/image/upload/v1663236049/Ecommerce-guitarras/pedals/0234575000_fen_pdl_frt_01_nr_cqvsan.jpg" })
+=> db.products.find(price: { $lt: 1000 })
+=> db.products.find(price: { $gt: 1000, $lte: 3000 })
+=> db.products.find(price: { $gt: 3000 })
+=> db.products.find({}, { title: 1, _id: 0 }).sort({price: 1}).skip(2).limit(1)
+=> db.products.updateMany({}, { $set: { stock: 100 } })
+=> db.products.updateMany({ price: { $gt: 4000 } }, { $set: { stock: 0 } })
+=> db.products.deleteMany({ price: { $lte: 1000 } })
+
+Consigna 6
+=> use ecommerce
+=> db.createUser({
+	user: 'pepe',
+	pwd: 'asd456',
+	roles: [
+		{ role: 'read', db: ecommerce }
+	]
+	})
+	

@@ -1,5 +1,5 @@
 import express from 'express';
-import Contenedor from '../classes/Class.js';
+import Contenedor from '../api/Class.js';
 import {io} from '../app.js';
 import { authMiddleware } from '../utiles.js';
 const router = express.Router();
